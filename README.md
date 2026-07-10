@@ -109,12 +109,12 @@ graph TD
 
 | Fase | Resumo Macro | Detalhes | Status |
 | --- | --- | --- | --- |
-| 00 | Engenharia de Requisitos e Modelagem Conceitual | [Ver Planejamento Conceitual](docs/fase_00.md) | ![Status](https://img.shields.io/badge/Status-em_progresso-yellow?style=flat&logo=github) |
-| 01 | Monolito Portátil Local | [Ver Especificação Técnica](docs/fase_01.md) | ![Status](https://img.shields.io/badge/Status-Pendente-orange?style=flat&logo=github) |
-| 02 | Persistência de Produção e Migrações | [Ver Especificação Técnica](docs/fase_02.md) | ![Status](https://img.shields.io/badge/Status-Pendente-orange?style=flat&logo=github) |
-| 03 | Conteinerização e Isolamento de Ambiente | [Ver Especificação Técnica](docs/fase_03.md) | ![Status](https://img.shields.io/badge/Status-Pendente-orange?style=flat&logo=github) |
-| 04 | Deploy On-Premises e Roteamento | [Ver Especificação Técnica](docs/fase_04.md) | ![Status](https://img.shields.io/badge/Status-Pendente-orange?style=flat&logo=github) |
-| 05 | Integração Contínua e Automação de Testes | [Ver Especificação Técnica](docs/fase_05.md) | ![Status](https://img.shields.io/badge/Status-Pendente-orange?style=flat&logo=github) |
-| 06 | Deploy Contínuo com Agentes Isolados | [Ver Especificação Técnica](docs/fase_06.md) | ![Status](https://img.shields.io/badge/Status-Pendente-orange?style=flat&logo=github) |
-| 07 | Desacoplamento e Expansão Poliglota | [Ver Especificação Técnica](docs/fase_07.md) | ![Status](https://img.shields.io/badge/Status-Pendente-orange?style=flat&logo=github) |
-| 08 | Orquestração Elástica e Telemetria | [Ver Especificação Técnica](docs/fase_08.md) | ![Status](https://img.shields.io/badge/Status-Pendente-orange?style=flat&logo=github) |
+| 00 | Engenharia de Requisitos e Modelagem Conceitual | [Ver Planejamento Conceitual](docs/fases/fase_00.md) | ![Status](https://img.shields.io/badge/Status-em_progresso-yellow?style=flat&logo=github) |
+| 01 | Monolito Portátil Local | [Ver Especificação Técnica](docs/fases/fase_01.md) | ![Status](https://img.shields.io/badge/Status-Pendente-orange?style=flat&logo=github) |
+| 02 | Persistência de Produção e Migrações | [Ver Especificação Técnica](docs/fases/fase_02.md) | ![Status](https://img.shields.io/badge/Status-Pendente-orange?style=flat&logo=github) |
+| 03 | Conteinerização e Isolamento de Ambiente | [Ver Especificação Técnica](docs/fases/fase_03.md) | ![Status](https://img.shields.io/badge/Status-Pendente-orange?style=flat&logo=github) |
+| 04 | Deploy On-Premises e Roteamento | [Ver Especificação Técnica](docs/fases/fase_04.md) | ![Status](https://img.shields.io/badge/Status-Pendente-orange?style=flat&logo=github) |
+| 05 | Integração Contínua e Automação de Testes | [Ver Especificação Técnica](docs/fases/fase_05.md) | ![Status](https://img.shields.io/badge/Status-Pendente-orange?style=flat&logo=github) |
+| 06 | Deploy Contínuo com Agentes Isolados | [Ver Especificação Técnica](docs/fases/fase_06.md) | ![Status](https://img.shields.io/badge/Status-Pendente-orange?style=flat&logo=github) |
+| 07 | Desacoplamento e Expansão Poliglota | [Ver Especificação Técnica](docs/fases/fase_07.md) | ![Status](https://img.shields.io/badge/Status-Pendente-orange?style=flat&logo=github) |
+| 08 | Orquestração Elástica e Telemetria | [Ver Especificação Técnica](docs/fases/fase_08.md) | ![Status](https://img.shields.io/badge/Status-Pendente-orange?style=flat&logo=github) |
