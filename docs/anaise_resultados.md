@@ -6,16 +6,18 @@ Este documento centraliza as métricas empíricas coletadas pelo K6, capturas de
 
 ## 📊 Matriz Comparativa Consolidada (Linha de Base)
 
-*Esta tabela será atualizada ao fim de cada fase para gerar um panorama visual imediato da evolução da eficiência do hardware.*
+> Esta tabela será atualizada ao fim de cada fase para gerar um panorama visual imediato da evolução da eficiência do hardware.
 
 | Métrica Analisada | Fase 01 (Monolito) | Fase 02 (Postgres) | Fase 03 (Docker) | Fase 04 (Server) | Fase 07 (Poliglota) | Fase 08 (K8s) |
 | :-- | :-: | :-: | :-: | :-: | :-: | :-: |
-| **Latência Média (ms)** | | | | | | |
+| **Latência Backend Puro (K6 - ms)** | | | | | | |
+| **Latência Total na Tela (Playwright - ms)** | | | | | | |
+| **Overhead de Tela (Diferença - ms)** | | | | | | |
 | **RAM em Idle (MB)** | | | | | | |
 | **RAM em Pico (MB)** | | | | | | |
 | **Pico de CPU (%)** | | | | | | |
-| **Tamanho do Artefato** | | | | | | |
-| **Downtime de Deploy** | N/A | N/A | N/A | | | |
+| **Tamanho do Artefato (MB)** | | | | | | |
+| **Downtime de Deploy (s)** | N/A | N/A | N/A | | | |
 
 ---
 
@@ -27,6 +29,7 @@ Este documento centraliza as métricas empíricas coletadas pelo K6, capturas de
 * **Confronto com a Hipótese:** [O comportamento teórico de RAM/CPU se confirmou? Explicar desvios]
 * **Análise de Custo de Oportunidade:** [O ganho técnico justificou a simplicidade da stack?]
 * **Evidências Visuais (Assets):** ![Gráfico de Carga Fase 1](assets/placeholder.png)
+* **Diferença Estrutural de Interface (HTMX):** Registrar quantos milissegundos a interface gastou para embutir o HTML recebido no DOM (Métrica extraída subtraindo o tempo do K6 do tempo total do Playwright).
 
 ### 🏁 Resultados da Fase 02: Persistência de Produção e Migrações
 
