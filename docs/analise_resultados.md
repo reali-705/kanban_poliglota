@@ -23,7 +23,7 @@ Este documento centraliza as métricas empíricas coletadas pelo K6, capturas de
 
 ## 📜 Histórico e Conclusões por Fase
 
-### 🏁 Resultados da Fase 01: Monolito Portátil Local
+### Resultados da Fase 01: Monolito Portátil Local
 
 * **Métricas Reais Coletadas (K6):** [Inserir dados brutos]
 * **Confronto com a Hipótese:** [O comportamento teórico de RAM/CPU se confirmou? Explicar desvios]
@@ -31,10 +31,20 @@ Este documento centraliza as métricas empíricas coletadas pelo K6, capturas de
 * **Evidências Visuais (Assets):** ![Gráfico de Carga Fase 1](assets/placeholder.png)
 * **Diferença Estrutural de Interface (HTMX):** Registrar quantos milissegundos a interface gastou para embutir o HTML recebido no DOM (Métrica extraída subtraindo o tempo do K6 do tempo total do Playwright).
 
-### 🏁 Resultados da Fase 02: Persistência de Produção e Migrações
+### Resultados da Fase 02: Persistência de Produção e Migrações
 
 * **Métricas Reais Coletadas (K6):** [Inserir dados brutos]
 * **Confronto com a Hipótese:** [Análise do impacto da introdução da rede TCP sobre a query do banco]
 * **Análise de Custo de Oportunidade:** [O custo computacional do Postgres compensou a segurança dos dados?]
 
-> Repetir a estrutura de blocos para as fases de 03 até 08
+### Resultados da Fase 03: Conteinerização e Isolamento de Ambiente
+
+### Resultados da Fase 04: Deploy On-Premises e Roteamento
+
+### Resultados da Fase 05: Integração Contínua e Automação de Testes
+
+### Resultados da Fase 06: Entrega e Deploy Contínuo com Runners Isolados
+
+### Resultados da Fase 07: Desacoplamento e Expansão Poliglota
+
+### Resultados da Fase 08: Orquestração Avançada e Observabilidade Coletiva

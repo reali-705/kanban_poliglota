@@ -24,4 +24,4 @@
 ### 🔗 Links Úteis desta Fase
 
 * [Verificar o Contrato de Telemetria e Logs Utilizados](../especificacoes_logs.md)
-* [Visualizar os Resultados de Performance Coletados desta Fase](../analise_resultados.md#-resultados-da-fase-05-integração-contínua)
+* [Visualizar os Resultados de Performance Coletados desta Fase](../analise_resultados.md#-resultados-da-fase-05-integração-contínua-e-automação-de-testes)

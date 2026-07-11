@@ -24,4 +24,4 @@
 ### 🔗 Links Úteis desta Fase
 
 * [Verificar o Contrato de Telemetria e Logs Utilizados](../especificacoes_logs.md)
-* [Visualizar os Resultados de Performance Coletados desta Fase](../analise_resultados.md#-resultados-da-fase-03-conteinerização)
+* [Visualizar os Resultados de Performance Coletados desta Fase](../analise_resultados.md#-resultados-da-fase-03-contêinerização-e-isolamento-de-ambiente)
