@@ -30,7 +30,7 @@ sequenceDiagram
     participant API as FastAPI (Validadores/Rotas)
     participant DB as Banco de Dados (SQLite/Postgres)
 
-    Usuário->>Front: Interação no Quadro (Arrastar Card)
+    Usuário->>Front: Interação no Quadro (Arrastar Tarefa)
     Front->>API: Requisição HTTP (Payload JSON)
     Note over API: Início do Log de Latência
     API->>API: Validação de Tipos (Pydantic/SQLModel)

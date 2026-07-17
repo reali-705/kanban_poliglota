@@ -6,24 +6,24 @@
 
 ### Entidades do Domínio e Restrições Estruturais
 
-* **Quadro (Board):** Agrupador máximo do ecossistema. O sistema gerencia múltiplos quadros anônimos isolados.
-* **Coluna (Column):** Elemento relacional de segmentação de fluxo vinculado a um único quadro.
-* **Tarefa (Task/Card):** Unidade atômica de trabalho vinculada a uma única coluna.
+* **Quadro:** Agrupador máximo do ecossistema. O sistema gerencia múltiplos quadros anônimos isolados.
+* **Coluna:** Elemento relacional de segmentação de fluxo vinculado a um único quadro.
+* **Tarefa:** Unidade atômica de trabalho vinculada a uma única coluna.
 
 ### Regras de Customização e Estado das Colunas
 
-* **Estado Inicial:** Cada novo quadro nascerá obrigatoriamente com três colunas padrão: `To Do`, `In Progress` e `Done`.
+* **Estado Inicial:** Cada novo quadro nascerá obrigatoriamente com três colunas padrão: `A Fazer`, `Em Andamento` e `Concluído`.
 * **Mutabilidade:** O usuário possui autonomia para renomear, adicionar ou remover colunas.
 * **Restrição Limite:** Um quadro deve conter, obrigatoriamente, um intervalo dinâmico de no mínimo **2** e no máximo **10 colunas** simultâneas. Qualquer tentativa de quebrar esse limite via requisição HTTP deve ser rejeitada pelo backend.
 
-### Anatomia e Regras de Validação da Tarefa (Card)
+### Anatomia e Regras de Validação da Tarefa
 
 * **Título:** Texto obrigatório, limitado a no máximo **50 caracteres**.
 * **Responsável:** Texto opcional, limitado a no máximo **50 caracteres** (tratado como string simples, sem relacionamento de tabelas de autenticação).
 * **Descrição:** Texto opcional, limitado a no máximo **255 caracteres**.
 * **Prioridade:** Campo obrigatório com restrição do tipo Enumerador estrito: `Alta`, `Média` ou `Baixa`.
 * **Data de Vencimento:** Campo opcional armazenando data/timestamp simples.
-* **Ordenação:** Fila simples e não-indexada. Novos cards ou tarefas movidas caem obrigatoriamente na última posição (final da fila) da coluna de destino.
+* **Ordenação:** Fila simples e não-indexada. Novas tarefas criadas ou movidas caem obrigatoriamente na última posição (final da fila) da coluna de destino.
 
 ---
 
@@ -35,7 +35,7 @@
 | --- | --- | --- | --- | --- |
 | **RF01** | Funcional | Múltiplos Quadros | O sistema deve permitir criar, listar e deletar quadros Kanban de forma independente por ID e Título. | Alta |
 | **RF02** | Funcional | Colunas Dinâmicas | O sistema deve gerenciar o ciclo de vida de colunas atreladas a um quadro, respeitando o teto de 2 a 10 elementos. | Alta |
-| **RF03** | Funcional | Movimentação de Cards | O sistema deve permitir criar tarefas e transicionar sua alocação entre colunas pertencentes ao mesmo quadro. | Alta |
+| **RF03** | Funcional | Movimentação de Tarefas | O sistema deve permitir criar tarefas e transicionar sua alocação entre colunas pertencentes ao mesmo quadro. | Alta |
 | **RNF01** | Não-Func. | Telemetria Mandatória | 100% das rotas de leitura/escrita devem propagar o identificador `trace_id` em logs estruturados em formato JSON. | Crítica |
 | **RNF02** | Não-Func. | Validação Server-Side | O backend deve rejeitar transações lógicas inválidas retornando código de status HTTP 400 (Bad Request). | Crítica |
 | **RNF03** | Não-Func. | Persistência Relacional | A exclusão de entidades pai deve acionar o expurgo imediato em cascata física de dados no banco de dados (Hard Delete). | Alta |
@@ -63,7 +63,7 @@
 
 #### CSU02: Exclusão Relacional em Cascata (Hard Delete)
 
-* **Pré-condição:** Existência de colunas com cards associados.
+* **Pré-condição:** Existência de colunas com tarefas associadas.
 * **Fluxo Principal:**
   1. O usuário aciona o comando de deletar uma coluna ou um quadro inteiro.
   2. O frontend exibe uma confirmação nativa do navegador (`confirm()`).
@@ -76,7 +76,7 @@
 
 ## 📐 3. Artefatos de Modelagem (Documentação Viva)
 
-* **[Diagrama de Estados (Mermaid):](../arquitetura/estados.md)** Determina o ciclo de vida e caminhos permitidos para os cards entre as colunas mutáveis do mesmo quadro.
+* **[Diagrama de Estados (Mermaid):](../arquitetura/estados.md)** Determina o ciclo de vida e caminhos permitidos para as tarefas entre as colunas mutáveis do mesmo quadro.
 * **[Diagrama de Classes (Mermaid):](../arquitetura/classes.md)** Desenho estrutural das camadas de domínio e casos de uso orientados à Arquitetura Limpa.
 * **[Modelo Lógico do Banco de Dados (DBML):](../arquitetura/bd_logico.dbml)** Mapeamento relacional de tabelas e restrições de chaves estrangeiras.
 

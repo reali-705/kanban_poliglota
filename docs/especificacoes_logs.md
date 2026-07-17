@@ -41,7 +41,7 @@ As chaves `front_click_to_request` e `front_receive_to_render` não são calcula
 
 ## 🧪 2. Estrutura dos Cenários de Estresse (K6)
 
-Os testes automatizados do K6 operam como a constante invariável do experimento. O script em JavaScript deve reproduzir o fluxo atômico completo: **Criar Card ➔ Listar Quadro ➔ Mover Card ➔ Deletar Card**.
+Os testes automatizados do K6 operam como a constante invariável do experimento. O script em JavaScript deve reproduzir o fluxo atômico completo: **Criar Tarefa ➔ Listar Quadro ➔ Mover Tarefa ➔ Deletar Tarefa**.
 
 > ⚠️ **Regra de Isolamento de Concorrência (Multi-Tenant):** Para evitar contenção física de linhas (*row locking*) e falsos erros de travamento de banco de dados (`database is locked`), o script do K6 não deve disparar requisições estáticas contra um único ID de Quadro. Cada Usuário Virtual (VU) deve gerar dinamicamente um UUID único ou incrementar uma faixa de IDs exclusivos no bloco `setup()` para isolar seus dados durante o estresse.
 
