@@ -1,0 +1,37 @@
+Project KanbanPoliglota {
+  database_type: 'PostgreSQL'
+  Note: 'Modelo Lógico compatível com SQLite e PostgreSQL'
+}
+
+Table quadro {
+  id integer [primary key, increment]
+  nome varchar(50) [not null, unique]
+}
+
+Table coluna {
+  id integer [primary key, increment]
+  quadro_id integer [not null]
+  nome varchar(50) [not null]
+  posicao integer [not null]
+  
+  Indexes {
+    // Índices Compostos: O nome e a posição só precisam ser únicos DENTRO do mesmo quadro
+    (quadro_id, nome) [unique, name: 'uq_coluna_nome_por_quadro']
+    (quadro_id, posicao) [unique, name: 'uq_coluna_posicao_por_quadro']
+  }
+}
+
+Table tarefa {
+  id integer [primary key, increment]
+  coluna_id integer [not null]
+  nome varchar(50) [not null]
+  descricao varchar(255)
+
+  Indexes {
+    // Índice B-Tree focado em performance para buscas ordenadas alfabeticamente na API
+    nome [name: 'idx_tarefa_nome']
+  }
+}
+
+Ref: coluna.quadro_id > quadro.id [delete: cascade]
+Ref: tarefa.coluna_id > coluna.id [delete: cascade]
